@@ -14,7 +14,7 @@ const Results = () => {
       sx={{ minHeight: "100vh" }}
     >
       <Grid item xs={3}>
-        <PagerShadow>test </PagerShadow>;
+        <PagerShadow>test </PagerShadow>
       </Grid>
     </Grid>
   );
