@@ -1,16 +1,36 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import SelectInput from "../components/Input/SelectInput";
 import PagerShadow from "../components/PagerShadow";
+import StickyHeaderTable from "../components/StickyHeaderTable";
 
-import { years, rounds } from "../api/formula1";
+import formula1 from "../api/formula1";
+import { years, rounds, convertXmlToJson } from "../api/formula1";
 
 const Results = () => {
   const [year, setYear] = useState<string>("2010");
   const [round, setRound] = useState<string>("1");
+  const [raceName, setRaceName] = useState<string>("");
+  const [dateStart, setDateStart] = useState<string>("");
+  const [raceResults, setRaceResults] = useState<any>([]);
+
   const yearsArr = Object.values(years);
   const roundsArr = Object.values(rounds);
-  console.log("roundsArr: ", roundsArr);
+  useEffect(() => {
+    const getList = async () => {
+      let response = null;
+
+      response = await formula1.getRaceResult(year, round);
+      const jsonData = convertXmlToJson(String(response)).MRData.RaceTable;
+      const { RaceName, Date, ResultsList } = jsonData.Race;
+      setRaceName(RaceName);
+      setDateStart(Date);
+      setRaceResults(ResultsList.Result);
+      console.log("ResultsList: ", ResultsList);
+      // setRaceResults(Race);
+    };
+    getList();
+  }, [year, round]);
 
   return (
     <Grid
@@ -28,11 +48,19 @@ const Results = () => {
               {year} RACE RESULTS /
             </Typography>
 
-            <Typography variant="h4" component="h2" textAlign="start">
+            <Typography variant="h4" component="h5" textAlign="start">
               Round {round}
             </Typography>
           </Box>
+          <Box sx={{ display: "flex", gap: 2, alignItems: "baseline", pb: 2 }}>
+            <Typography variant="body1" textAlign="start" sx={{ py: 2 }}>
+              Race name: {raceName}
+            </Typography>
 
+            <Typography variant="body2" component="h5" textAlign="start">
+              Date start: {dateStart}
+            </Typography>
+          </Box>
           <Box sx={{ display: "flex" }} gap={2}>
             <SelectInput
               title="Year"
@@ -46,6 +74,9 @@ const Results = () => {
               setValue={setRound}
               options={roundsArr}
             />
+          </Box>{" "}
+          <Box mt={5}>
+            <StickyHeaderTable />
           </Box>
         </PagerShadow>
       </Grid>

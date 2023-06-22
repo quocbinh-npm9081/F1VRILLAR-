@@ -1,4 +1,5 @@
 import axiosClient from "./axiosClient";
+const { XMLParser } = require("fast-xml-parser");
 
 export const years: { [key: string]: string } = {
   2010: "2010",
@@ -14,7 +15,17 @@ export const rounds: { [key: string]: string } = {
   4: "4",
   5: "5",
 };
-const bmdbApi = {
+export const convertXmlToJson = (xml: string): any => {
+  const options = {
+    // ignoreAttributes: false,
+    // attributeNamePrefix: "@",
+  };
+
+  const parser = new XMLParser(options);
+  let jsonObj = parser.parse(xml);
+  return jsonObj;
+};
+const formula1 = {
   getDrivers: (type: any, params: any) => {
     const url = "drivers";
     return axiosClient.get(url);
@@ -36,4 +47,4 @@ const bmdbApi = {
     return axiosClient.get(url);
   },
 };
-export default bmdbApi;
+export default formula1;
