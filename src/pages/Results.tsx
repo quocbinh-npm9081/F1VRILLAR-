@@ -26,8 +26,6 @@ const Results = () => {
       setRaceName(RaceName);
       setDateStart(Date);
       setRaceResults(ResultsList.Result);
-      console.log("ResultsList: ", ResultsList);
-      // setRaceResults(Race);
     };
     getList();
   }, [year, round]);
@@ -76,7 +74,7 @@ const Results = () => {
             />
           </Box>{" "}
           <Box mt={5}>
-            <StickyHeaderTable />
+            <StickyHeaderTable data={raceResults} />
           </Box>
         </PagerShadow>
       </Grid>
