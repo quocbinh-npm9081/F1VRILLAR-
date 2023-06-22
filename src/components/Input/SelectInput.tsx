@@ -28,8 +28,8 @@ const SelectInput: React.FC<TProp> = ({ value, setValue, title, options }) => {
           onChange={handleChange}
         >
           {options.map((opt: any, index: number) => (
-            <MenuItem key={index} value={10}>
-              Ten
+            <MenuItem key={index} value={opt}>
+              {opt}
             </MenuItem>
           ))}
         </Select>
