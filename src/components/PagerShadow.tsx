@@ -1,5 +1,4 @@
 import * as React from "react";
-import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 
 type TProps = {
@@ -8,9 +7,14 @@ type TProps = {
 
 const PagerShadow: React.FC<TProps> = ({ children }) => {
   return (
-    <Grid container spacing={2}>
-      <Paper elevation={3}>{children}</Paper>
-    </Grid>
+    <Paper
+      elevation={3}
+      sx={{
+        p: 2,
+      }}
+    >
+      {children}
+    </Paper>
   );
 };
 export default PagerShadow;
