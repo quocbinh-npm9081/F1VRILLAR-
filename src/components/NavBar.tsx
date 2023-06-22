@@ -13,8 +13,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
 import { styled } from "@mui/material/styles";
+import Logo from "./Logo";
 
 const LinkButton = styled(NavLink)`
   text-decoration: none;
