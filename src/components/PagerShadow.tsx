@@ -10,6 +10,7 @@ const PagerShadow: React.FC<TProps> = ({ children }) => {
     <Paper
       elevation={3}
       sx={{
+        position: "relative",
         p: 2,
       }}
     >

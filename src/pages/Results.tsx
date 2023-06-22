@@ -3,7 +3,7 @@ import { Grid, Box, Typography } from "@mui/material";
 import SelectInput from "../components/Input/SelectInput";
 import PagerShadow from "../components/PagerShadow";
 import StickyHeaderTable from "../components/StickyHeaderTable";
-
+import CircularIndeterminate from "../components/CircularIndeterminate";
 import formula1 from "../api/formula1";
 import { years, rounds, convertXmlToJson } from "../api/formula1";
 
@@ -27,6 +27,7 @@ const Results = () => {
       setDateStart(Date);
       setRaceResults(ResultsList.Result);
     };
+
     getList();
   }, [year, round]);
 
@@ -41,6 +42,22 @@ const Results = () => {
     >
       <Grid item xs={3}>
         <PagerShadow>
+          {/* {isPending ?? (
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                bottom: 0,
+                width: "100%",
+                zIndex: 999,
+                background:
+                  "linear-gradient(90deg, rgba(2,0,36,0.6194852941176471) 100%, rgba(0,212,255,1) 100%);",
+              }}
+            >
+              <CircularIndeterminate />
+            </Box>
+          )} */}
           <Box sx={{ display: "flex", gap: 2, alignItems: "baseline", py: 5 }}>
             <Typography variant="h2" component="h2" textAlign="start">
               {year} RACE RESULTS /

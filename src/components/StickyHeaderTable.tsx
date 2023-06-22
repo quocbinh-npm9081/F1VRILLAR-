@@ -1,5 +1,5 @@
 import * as React from "react";
-import Paper from "@mui/material/Paper";
+import { Paper } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -65,9 +65,7 @@ function createRows(data: any[]) {
   );
   return rows;
 }
-
 const StickyHeaderTable = ({ data }: TProps) => {
-  const [isPending, startTransition] = React.useTransition();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [rows, setRows] = React.useState<any[]>([]);
@@ -82,9 +80,8 @@ const StickyHeaderTable = ({ data }: TProps) => {
     setPage(0);
   };
   React.useEffect(() => {
-    console.log("data: ", data);
     const records = createRows(data);
-    startTransition(() => setRows(records));
+    setRows(records);
   }, [data]);
 
   return (
