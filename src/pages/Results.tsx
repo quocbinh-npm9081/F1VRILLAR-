@@ -3,7 +3,7 @@ import { Grid, Box, Typography } from "@mui/material";
 import SelectInput from "../components/Input/SelectInput";
 import PagerShadow from "../components/PagerShadow";
 import StickyHeaderTable from "../components/StickyHeaderTable";
-import CircularIndeterminate from "../components/CircularIndeterminate";
+// import CircularIndeterminate from "../components/CircularIndeterminate";
 import formula1 from "../api/formula1";
 import { years, rounds, convertXmlToJson } from "../api/formula1";
 
