@@ -18,6 +18,11 @@ import Logo from "./Logo";
 const LinkButton = styled(NavLink)`
   text-decoration: none;
   color: #fff !important;
+  padding: 5px;
+  &.active {
+    /* Kiểu cho NavLink khi nó được kích hoạt */
+    background-color: rgb(2, 0, 36);
+  }
 `;
 interface Props {
   window?: () => Window;
@@ -101,7 +106,7 @@ function NavBar(props: Props) {
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item.to}>
+              <Button key={item.to} sx={{ padding: 0, mx: 2 }}>
                 <LinkButton to={item.to}>{item.title}</LinkButton>
               </Button>
             ))}
