@@ -92,7 +92,12 @@ function NavBar(props: Props) {
       color="secondary"
     >
       <AppBar component="nav">
-        <Toolbar>
+        <Toolbar
+          sx={{
+            display: "flex!important",
+            justifyContent: "space-between!important",
+          }}
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -105,14 +110,15 @@ function NavBar(props: Props) {
           <Box
             component="div"
             sx={{
-              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
               height: 50,
               width: 40,
-              display: { xs: "none", sm: "block" },
+              padding: "4px",
             }}
           >
             <Logo />
           </Box>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item.to} sx={{ padding: 0, mx: 2 }}>
