@@ -9,8 +9,9 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 type TProps = {
   children: any;
+  title: string;
 };
-const AccordionTutorial = ({ children }: TProps) => {
+const AccordionTutorial = ({ children, title }: TProps) => {
   return (
     <Box sx={{ py: 2 }}>
       <Accordion>
@@ -19,7 +20,7 @@ const AccordionTutorial = ({ children }: TProps) => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Race Result Summary</Typography>
+          <Typography>{title}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>{children}</Typography>

@@ -103,7 +103,7 @@ const Results = () => {
           </Box>{" "}
           <Box mt={5} gap={2}>
             {isMobile ? (
-              <AccordionTutorial>
+              <AccordionTutorial title="Race Result Summary">
                 <PieChart data={raceResults} labels={labelPie} />
               </AccordionTutorial>
             ) : (

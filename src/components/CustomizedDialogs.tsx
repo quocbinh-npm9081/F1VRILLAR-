@@ -10,6 +10,7 @@ import {
 import { styled } from "@mui/material/styles";
 import CloseIcon from "@mui/icons-material/Close";
 import AccordionTutorial from "./AccordionTutorial";
+import BarChart from "./Charts/BarChart";
 type TProps = {
   isOpen: boolean;
   setOpenDilog: (isOp: boolean) => void;
@@ -102,11 +103,8 @@ const CustomizedDialogs = ({ isOpen, setOpenDilog, info }: TProps) => {
             cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
             dui. Donec ullamcorper nulla non metus auctor fringilla.
           </Typography>
-          <AccordionTutorial>
-            {" "}
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
+          <AccordionTutorial title="Achievements">
+            <BarChart driverInfo={info} />
           </AccordionTutorial>
         </DialogContent>
       </BootstrapDialog>
