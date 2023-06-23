@@ -169,38 +169,31 @@ const Drivers = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <PagerShadow>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-start",
-            flexDirection: "rows",
-            gap: 2,
-          }}
-        >
-          <Box>
+        <Grid container gap={2} justifyContent="start" alignItems="center">
+          <Grid item sm={12} md={1}>
             <SelectInput
               title="Country"
               value={country}
               setValue={setCountry}
               options={countryOptions}
             />
-          </Box>
-          <Box>
+          </Grid>
+          <Grid item sm={12} md={1}>
             <SelectInput
               title="Team"
               value={team}
               setValue={setTeam}
               options={teamOptions}
             />
-          </Box>
-          <Box>
+          </Grid>
+          <Grid item sm={12} md={1} justifyContent="start">
             <ButtonContained
               title="Reset"
               iconComponent={<IconReset />}
               handleClick={handleClickRestFilter}
             />
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
       </PagerShadow>
       <Grid container justifyContent="start" alignItems="start" spacing={1}>
         {drivers.map((drive: any, index: number) => (
