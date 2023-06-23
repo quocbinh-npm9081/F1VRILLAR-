@@ -75,7 +75,7 @@ const PieChart: React.FC<TProps> = ({ data, labels }) => {
   };
 
   return (
-    <Box sx={{ minWidth: "100%", minHeight: "150px" }}>
+    <Box sx={{ minWidth: "100%", minHeight: "150px", marginBottom: 5 }}>
       <Pie data={data1} options={options} />
     </Box>
   );
