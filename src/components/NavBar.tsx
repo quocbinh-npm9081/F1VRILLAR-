@@ -11,10 +11,10 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Logo from "./Logo";
-
+import { height } from "@mui/system";
 const LinkButton = styled(NavLink)`
   text-decoration: none;
   color: #fff !important;
@@ -50,11 +50,18 @@ const navItems = [
 
 function NavBar(props: Props) {
   const { window } = props;
+  const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const [isHomePage, setHomePages] = React.useState<boolean>(false);
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  React.useEffect(() => {
+    if (pathname === "/") setHomePages(true);
+    else setHomePages(false);
+  }, [pathname]);
+  console.log("location: ", pathname);
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -81,7 +88,10 @@ function NavBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }} color="secondary">
+    <Box
+      sx={{ display: "flex", height: isHomePage ? 0 : "auto" }}
+      color="secondary"
+    >
       <AppBar component="nav">
         <Toolbar>
           <IconButton
