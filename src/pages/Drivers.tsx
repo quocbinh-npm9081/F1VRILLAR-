@@ -2,7 +2,9 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import CardDriver from "../components/CardDriver";
-
+import PagerShadow from "../components/PagerShadow";
+import SelectInput from "../components/Input/SelectInput";
+import ButtonContained from "../components/Buttons/ButtonContained";
 const dummyDrivers = [
   {
     name: "Max Verstappen",
@@ -111,10 +113,86 @@ const dummyDrivers = [
 ];
 
 const Drivers = () => {
+  const [country, setCountry] = React.useState<string>("All");
+  const [team, setTeam] = React.useState<string>("All");
+  const [drivers, setDrivers] = React.useState<any>([]);
+  const countryOptions = [
+    "All",
+    "Spain",
+    "Netherlands",
+    "Mexico",
+    "United Kingdom",
+    "Spain",
+    "Monaco",
+    "Canada",
+  ];
+  const teamOptions = [
+    "All",
+    "Aston Martin",
+    "Red Bull Racing",
+    "Mercedes",
+    "Ferrari",
+    "Spain",
+    "Monaco",
+    "Canada",
+  ];
+
+  React.useEffect(() => {
+    if (country !== "All" && team !== "All") {
+      const driversByCountry = dummyDrivers.filter(
+        (driver) => driver.country === country && driver.team === team
+      );
+      setDrivers(driversByCountry);
+    }
+    if (country === "All" && team !== "All") {
+      const driversByCountry = dummyDrivers.filter(
+        (driver) => driver.team === team
+      );
+      setDrivers(driversByCountry);
+    }
+    if (country !== "All" && team === "All") {
+      const driversByCountry = dummyDrivers.filter(
+        (driver) => driver.country === country
+      );
+      setDrivers(driversByCountry);
+    }
+    if (country === "All" && team === "All") setDrivers(dummyDrivers);
+  }, [country, team]);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
+      <PagerShadow>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "flex-start",
+            flexDirection: "rows",
+            gap: 2,
+          }}
+        >
+          <Box>
+            <SelectInput
+              title="Country"
+              value={country}
+              setValue={setCountry}
+              options={countryOptions}
+            />
+          </Box>
+          <Box>
+            <SelectInput
+              title="Team"
+              value={team}
+              setValue={setTeam}
+              options={teamOptions}
+            />
+          </Box>
+          <Box>
+            <ButtonContained title="Reset" />
+          </Box>
+        </Box>
+      </PagerShadow>
       <Grid container justifyContent="start" alignItems="start" spacing={1}>
-        {dummyDrivers.map((drive: any, index: number) => (
+        {drivers.map((drive: any, index: number) => (
           <Grid key={drive.DateOfBirth} item xs={12} md={4} lg={3}>
             <CardDriver drive={drive} />
           </Grid>
