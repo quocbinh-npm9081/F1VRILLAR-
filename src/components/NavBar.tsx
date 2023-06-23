@@ -27,7 +27,7 @@ const drawerWidth = 240;
 const navItems = [
   {
     title: "Home",
-    to: "/home",
+    to: "/",
   },
   {
     title: "Drivers",
