@@ -7,6 +7,9 @@ export const years: { [key: string]: string } = {
   2013: "2013",
   2014: "2014",
   2015: "2015",
+  2016: "2016",
+  2017: "2017",
+  2018: "2018",
 };
 export const rounds: { [key: string]: string } = {
   1: "1",
@@ -59,7 +62,7 @@ export const dummyHeloSlidesMobile = [
 ];
 
 const formula1 = {
-  getDrivers: (type: any, params: any) => {
+  getDrivers: () => {
     const url = "drivers";
     return axiosClient.get(url);
   },

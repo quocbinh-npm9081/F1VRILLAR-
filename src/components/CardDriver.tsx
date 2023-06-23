@@ -4,8 +4,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-
-const CardDriver = () => {
+type TProps = {
+  drive: any;
+};
+const CardDriver: React.FC<TProps> = ({ drive }) => {
   return (
     <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
       <CardActionArea>
@@ -16,12 +18,24 @@ const CardDriver = () => {
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            textAlign="start"
+          >
+            {drive.GivenName}
+            {""} {drive.FamilyName}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography variant="body2" color="text.secondary" textAlign="start">
+            {drive.Nationality}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            textAlign="start"
+          >
+            {drive.DateOfBirth}
           </Typography>
         </CardContent>
       </CardActionArea>
