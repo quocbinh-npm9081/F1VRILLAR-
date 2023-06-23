@@ -5,13 +5,13 @@ import Drivers from "../pages/Drivers";
 import Results from "../pages/Results";
 const ReactRouter = () => {
   return (
-    <div>
+    <>
       <Routes>
         <Route path="/results" element={<Results />} />
         <Route path="/drivers" element={<Drivers />} />
         <Route path="/home" element={<Home />} />
       </Routes>
-    </div>
+    </>
   );
 };
 
