@@ -37,10 +37,7 @@ const navItems = [
     title: "Drivers",
     to: "/drivers",
   },
-  {
-    title: "Constructors",
-    to: "/constructors",
-  },
+
   {
     title: "Results",
     to: "/results",
