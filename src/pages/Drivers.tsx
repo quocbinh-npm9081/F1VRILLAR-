@@ -5,6 +5,7 @@ import CardDriver from "../components/CardDriver";
 import PagerShadow from "../components/PagerShadow";
 import SelectInput from "../components/Input/SelectInput";
 import ButtonContained from "../components/Buttons/ButtonContained";
+import IconReset from "../components/Icons/IconReset";
 const dummyDrivers = [
   {
     name: "Max Verstappen",
@@ -116,6 +117,12 @@ const Drivers = () => {
   const [country, setCountry] = React.useState<string>("All");
   const [team, setTeam] = React.useState<string>("All");
   const [drivers, setDrivers] = React.useState<any>([]);
+
+  const handleClickRestFilter = () => {
+    setCountry("All");
+    setTeam("All");
+  };
+
   const countryOptions = [
     "All",
     "Spain",
@@ -187,7 +194,11 @@ const Drivers = () => {
             />
           </Box>
           <Box>
-            <ButtonContained title="Reset" />
+            <ButtonContained
+              title="Reset"
+              iconComponent={<IconReset />}
+              handleClick={handleClickRestFilter}
+            />
           </Box>
         </Box>
       </PagerShadow>

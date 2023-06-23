@@ -1,12 +1,22 @@
 import React from "react";
-import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
 type TProps = {
   title: string;
+  iconComponent: React.ReactNode;
+  handleClick: () => void;
 };
-const ButtonContained: React.FC<TProps> = ({ title }) => {
+const ButtonContained: React.FC<TProps> = ({
+  title,
+  iconComponent,
+  handleClick,
+}) => {
   return (
-    <Button variant="contained" endIcon={<SendIcon />}>
+    <Button
+      variant="contained"
+      endIcon={iconComponent}
+      onClick={handleClick}
+      sx={{ height: "100%" }}
+    >
       {title}
     </Button>
   );
