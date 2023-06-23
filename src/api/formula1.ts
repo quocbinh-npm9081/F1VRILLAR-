@@ -28,7 +28,18 @@ export const convertXmlToJson = (xml: string): any => {
   let jsonObj = parser.parse(xml);
   return jsonObj;
 };
+export const getPropertyInXML = (
+  xml: string,
+  tagName: string,
+  attribute: string
+) => {
+  // Tạo một đối tượng DOMParser để phân tích cú pháp XML
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(xml, "application/xml");
 
+  // Truy cập trường driverId trong XML và lấy giá trị
+  return xmlDoc.getElementsByTagName(tagName)[0].getAttribute(attribute);
+};
 export const dummyHeloSlidesPC = [
   {
     img: "https://wallpapercave.com/wp/wp5738575.jpg",
@@ -70,7 +81,7 @@ const formula1 = {
     const url = years[year] + "drivers/";
     return axiosClient.get(url, params);
   },
-  getDriverInfo: (type: string, id: any) => {
+  getDriverInfo: (id: any) => {
     const url = "drivers/" + id;
     return axiosClient.get(url);
   },
