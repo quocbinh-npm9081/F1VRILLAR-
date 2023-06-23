@@ -83,6 +83,7 @@ const StickyHeaderTable = ({ data }: TProps) => {
     const records = createRows(data);
     setRows(records);
   }, [data]);
+  console.log("data: ", data);
 
   return (
     <Paper sx={{ position: "relative", width: "100%", overflow: "hidden" }}>

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, useMediaQuery } from "@mui/material";
+
 import SelectInput from "../components/Input/SelectInput";
 import PagerShadow from "../components/PagerShadow";
 import StickyHeaderTable from "../components/StickyHeaderTable";
+import PieChart from "../components/Charts/PieChart";
 // import CircularIndeterminate from "../components/CircularIndeterminate";
 import formula1 from "../api/formula1";
 import { years, rounds, convertXmlToJson } from "../api/formula1";
@@ -13,9 +15,18 @@ const Results = () => {
   const [raceName, setRaceName] = useState<string>("");
   const [dateStart, setDateStart] = useState<string>("");
   const [raceResults, setRaceResults] = useState<any>([]);
+  const isMobile = useMediaQuery("(max-width:600px)");
 
   const yearsArr = Object.values(years);
   const roundsArr = Object.values(rounds);
+  const labelPie = [
+    "Finished",
+    "Electrical",
+    "Accident",
+    "Hydraulics",
+    "Overheating",
+    "Suspension",
+  ];
   useEffect(() => {
     const getList = async () => {
       let response = null;
@@ -90,7 +101,8 @@ const Results = () => {
               options={roundsArr}
             />
           </Box>{" "}
-          <Box mt={5}>
+          <Box mt={5} gap={2}>
+            <PieChart data={raceResults} labels={labelPie} />
             <StickyHeaderTable data={raceResults} />
           </Box>
         </PagerShadow>
