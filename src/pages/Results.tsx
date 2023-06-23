@@ -72,11 +72,11 @@ const Results = () => {
             </Box>
           )} */}
           <Box sx={{ display: "flex", gap: 2, alignItems: "baseline", py: 5 }}>
-            <Typography variant="h2" component="h2" textAlign="start">
+            <Typography variant="h2" textAlign="start">
               {year} RACE RESULTS /
             </Typography>
 
-            <Typography variant="h4" component="h5" textAlign="start">
+            <Typography variant="h4" textAlign="start">
               Round {round}
             </Typography>
           </Box>
@@ -85,7 +85,7 @@ const Results = () => {
               Race name: {raceName}
             </Typography>
 
-            <Typography variant="body2" component="h5" textAlign="start">
+            <Typography variant="body2" textAlign="start">
               Date start: {dateStart}
             </Typography>
           </Box>

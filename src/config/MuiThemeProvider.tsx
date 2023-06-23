@@ -13,6 +13,24 @@ const MuiThemeProvider: React.FC<TProps> = ({ children }) => {
         main: red[400],
       },
     },
+    typography: {
+      h2: {
+        "@media (min-width:200px)": {
+          fontSize: "1.5rem",
+        },
+        "@media (min-width:600px)": {
+          fontSize: "2.5rem",
+        },
+      },
+      h4: {
+        "@media (min-width:200px)": {
+          fontSize: "0.8rem",
+        },
+        "@media (min-width:600px)": {
+          fontSize: "1rem",
+        },
+      },
+    },
   });
   return (
     <ThemeProvider theme={theme}>

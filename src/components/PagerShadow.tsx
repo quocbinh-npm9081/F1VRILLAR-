@@ -12,6 +12,7 @@ const PagerShadow: React.FC<TProps> = ({ children }) => {
       sx={{
         position: "relative",
         p: 2,
+        m: 2,
       }}
     >
       {children}
