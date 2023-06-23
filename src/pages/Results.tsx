@@ -5,6 +5,7 @@ import SelectInput from "../components/Input/SelectInput";
 import PagerShadow from "../components/PagerShadow";
 import StickyHeaderTable from "../components/StickyHeaderTable";
 import PieChart from "../components/Charts/PieChart";
+import AccordionTutorial from "../components/AccordionTutorial";
 // import CircularIndeterminate from "../components/CircularIndeterminate";
 import formula1 from "../api/formula1";
 import { years, rounds, convertXmlToJson } from "../api/formula1";
@@ -41,6 +42,7 @@ const Results = () => {
 
     getList();
   }, [year, round]);
+  console.log("isMobile: ", isMobile);
 
   return (
     <Grid
@@ -102,7 +104,13 @@ const Results = () => {
             />
           </Box>{" "}
           <Box mt={5} gap={2}>
-            <PieChart data={raceResults} labels={labelPie} />
+            {isMobile ? (
+              <AccordionTutorial>
+                <PieChart data={raceResults} labels={labelPie} />
+              </AccordionTutorial>
+            ) : (
+              <PieChart data={raceResults} labels={labelPie} />
+            )}
             <StickyHeaderTable data={raceResults} />
           </Box>
         </PagerShadow>
