@@ -79,26 +79,34 @@ const CustomizedDialogs = ({ isOpen, setOpenDilog, info }: TProps) => {
               <img src={info.image} alt="fake driver" />
             </Box>
             <Box>
-              <Typography gutterBottom>Team: {info.team}</Typography>
-              <Typography gutterBottom>Country: {info.country}</Typography>
-              <Typography gutterBottom>
+              <Typography gutterBottom variant="subtitle2">
+                Team: {info.team}
+              </Typography>
+              <Typography gutterBottom variant="subtitle2">
+                Country: {info.country}
+              </Typography>
+              <Typography gutterBottom variant="subtitle2">
                 DateOfBirth: {info.DateOfBirth}
               </Typography>
-              <Typography gutterBottom>Podiums: {info.podiums}</Typography>
-              <Typography gutterBottom>Points: {info.points}</Typography>
-              <Typography gutterBottom>
+              <Typography gutterBottom variant="subtitle2">
+                Podiums: {info.podiums}
+              </Typography>
+              <Typography gutterBottom variant="subtitle2">
+                Points: {info.points}
+              </Typography>
+              <Typography gutterBottom variant="subtitle2">
                 World Championships: {info.worldChampionships}
               </Typography>
-              <Typography gutterBottom>
+              <Typography gutterBottom variant="subtitle2">
                 Highest Race Finish: {info.highestRaceFinish}
               </Typography>
-              <Typography gutterBottom>
+              <Typography gutterBottom variant="subtitle2">
                 Highest Grid Position: {info.highestGridPosition}
               </Typography>
             </Box>
           </Box>
 
-          <Typography gutterBottom>
+          <Typography gutterBottom variant="subtitle2">
             Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
             cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
             dui. Donec ullamcorper nulla non metus auctor fringilla.

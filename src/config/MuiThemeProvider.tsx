@@ -30,6 +30,14 @@ const MuiThemeProvider: React.FC<TProps> = ({ children }) => {
           fontSize: "1rem",
         },
       },
+      subtitle2: {
+        "@media (min-width:200px)": {
+          fontSize: "0.6rem",
+        },
+        "@media (min-width:600px)": {
+          fontSize: "0.9rem",
+        },
+      },
     },
   });
   return (
