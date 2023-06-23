@@ -31,7 +31,6 @@ const Results = () => {
   useEffect(() => {
     const getList = async () => {
       let response = null;
-
       response = await formula1.getRaceResult(year, round);
       const jsonData = convertXmlToJson(String(response)).MRData.RaceTable;
       const { RaceName, Date, ResultsList } = jsonData.Race;
@@ -39,7 +38,6 @@ const Results = () => {
       setDateStart(Date);
       setRaceResults(ResultsList.Result);
     };
-
     getList();
   }, [year, round]);
   console.log("isMobile: ", isMobile);

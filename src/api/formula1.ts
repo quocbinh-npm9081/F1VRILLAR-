@@ -25,6 +25,39 @@ export const convertXmlToJson = (xml: string): any => {
   let jsonObj = parser.parse(xml);
   return jsonObj;
 };
+
+export const dummyHeloSlidesPC = [
+  {
+    img: "https://wallpapercave.com/wp/wp5738575.jpg",
+    title:
+      "PALMER: Norris was in great overtaking form in Canada – but was his ‘unsportsmanlike behaviour’ penalty fair?",
+  },
+  {
+    img: "https://wallpapercave.com/wp/wp3607781.jpg",
+    title: "WATCH: F1 for beginners – Everything you need to know about F1",
+  },
+  {
+    img: "https://wallpapercave.com/wp/wp9001455.jpg",
+    title: "IN NUMBERS: The amazing stats behind Red Bull’s century of F1 wins",
+  },
+];
+
+export const dummyHeloSlidesMobile = [
+  {
+    img: "https://mfiles.alphacoders.com/943/943980.jpg",
+    title:
+      "PALMER: Norris was in great overtaking form in Canada – but was his ‘unsportsmanlike behaviour’ penalty fair?",
+  },
+  {
+    img: "https://mfiles.alphacoders.com/926/926023.jpg",
+    title: "WATCH: F1 for beginners – Everything you need to know about F1",
+  },
+  {
+    img: "https://mfiles.alphacoders.com/919/919247.jpg",
+    title: "IN NUMBERS: The amazing stats behind Red Bull’s century of F1 wins",
+  },
+];
+
 const formula1 = {
   getDrivers: (type: any, params: any) => {
     const url = "drivers";
