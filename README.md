@@ -49,7 +49,8 @@ npm start
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/eda86fea-fbb8-4606-a2ac-727a2f2a62e0)
 
   - SelectInput : Ô nhập hiệu, bao gồm các tùy chọn , chọn để tìm kiếm kết quá mong muốn
-  ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/45bfe38f-1188-43d3-aa09-ce2a87bb880d)
+  -   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/45bfe38f-1188-43d3-aa09-ce2a87bb880d)
+  -   
   - ButtonContained: Button có background màu xanh dương, dừng để rest các tùy chọn của người dùng trở về trạng tháy ban đầu ( mặc định chọn toàn bộ tay đua)
    
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/e2e10b9d-ebce-4dd9-83b2-65b3a36b95a7)
