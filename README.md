@@ -9,7 +9,7 @@
 
 ## Installation
 
-Install my-project with npm
+Install F1 VRILLAR  with npm
 
 ```bash
   git clone https://github.com/quocbinh-npm9081/F1VRILLAR-
