@@ -86,13 +86,14 @@ const StickyHeaderTable = ({ data }: TProps) => {
   console.log("data: ", data);
 
   return (
-    <Paper sx={{ position: "relative", width: "100%", overflow: "hidden" }}>
+    <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
+        <Table stickyHeader aria-label="sticky table" size="small">
           <TableHead>
             <TableRow>
               {columns.map((column) => (
                 <TableCell
+                  size="small"
                   key={column.id}
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
@@ -107,7 +108,12 @@ const StickyHeaderTable = ({ data }: TProps) => {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row, index: number) => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                  <TableRow
+                    hover={true}
+                    role="checkbox"
+                    tabIndex={-1}
+                    key={index}
+                  >
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (

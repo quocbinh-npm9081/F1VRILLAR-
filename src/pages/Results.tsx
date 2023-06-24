@@ -43,17 +43,17 @@ const Results = () => {
   console.log("isMobile: ", isMobile);
 
   return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      sx={{ minHeight: "100vh" }}
-    >
-      <Grid item xs={3}>
-        <PagerShadow>
-          {/* {isPending ?? (
+    <>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Grid item xs={3}>
+          <PagerShadow>
+            {/* {isPending ?? (
             <Box
               sx={{
                 position: "absolute",
@@ -69,51 +69,77 @@ const Results = () => {
               <CircularIndeterminate />
             </Box>
           )} */}
-          <Box sx={{ display: "flex", gap: 2, alignItems: "baseline", py: 5 }}>
-            <Typography variant="h2" textAlign="start">
-              {year} RACE RESULTS /
-            </Typography>
+            <Box
+              sx={{ display: "flex", gap: 2, alignItems: "baseline", py: 5 }}
+            >
+              <Typography variant="h2" textAlign="start">
+                {year} RACE RESULTS /
+              </Typography>
 
-            <Typography variant="h4" textAlign="start">
-              Round {round}
-            </Typography>
-          </Box>
-          <Box sx={{ display: "flex", gap: 2, alignItems: "baseline", pb: 2 }}>
-            <Typography variant="body1" textAlign="start" sx={{ py: 2 }}>
-              Race name: {raceName}
-            </Typography>
+              <Typography variant="h4" textAlign="start">
+                Round {round}
+              </Typography>
+            </Box>
+            <Box
+              sx={{ display: "flex", gap: 2, alignItems: "baseline", pb: 2 }}
+            >
+              <Typography variant="body1" textAlign="start" sx={{ py: 2 }}>
+                Race name: {raceName}
+              </Typography>
 
-            <Typography variant="body2" textAlign="start">
-              Date start: {dateStart}
-            </Typography>
-          </Box>
-          <Box sx={{ display: "flex" }} gap={2}>
-            <SelectInput
-              title="Year"
-              value={year}
-              setValue={setYear}
-              options={yearsArr}
-            />
-            <SelectInput
-              title="Round"
-              value={round}
-              setValue={setRound}
-              options={roundsArr}
-            />
-          </Box>{" "}
-          <Box mt={5} gap={2}>
-            {isMobile ? (
-              <AccordionTutorial title="Race Result Summary">
-                <PieChart data={raceResults} labels={labelPie} />
-              </AccordionTutorial>
-            ) : (
-              <PieChart data={raceResults} labels={labelPie} />
-            )}
-            <StickyHeaderTable data={raceResults} />
-          </Box>
-        </PagerShadow>
+              <Typography variant="body2" textAlign="start">
+                Date start: {dateStart}
+              </Typography>
+            </Box>
+            <Box sx={{ display: "flex" }} gap={2}>
+              <SelectInput
+                title="Year"
+                value={year}
+                setValue={setYear}
+                options={yearsArr}
+              />
+              <SelectInput
+                title="Round"
+                value={round}
+                setValue={setRound}
+                options={roundsArr}
+              />
+            </Box>{" "}
+            <Box gap={2}>
+              {isMobile ? (
+                <AccordionTutorial title="Race Result Summary">
+                  <PieChart data={raceResults} labels={labelPie} />
+                </AccordionTutorial>
+              ) : (
+                <>
+                  <PieChart data={raceResults} labels={labelPie} />
+                  <StickyHeaderTable data={raceResults} />
+                </>
+              )}
+            </Box>
+          </PagerShadow>
+        </Grid>
       </Grid>
-    </Grid>
+
+      {isMobile ? (
+        <Grid
+          style={{ maxWidth: "443px", minWidth: "422px", margin: "0 auto" }}
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid item xs={12} style={{ maxWidth: "400px" }}>
+            <PagerShadow width="100%">
+              <StickyHeaderTable data={raceResults} />
+            </PagerShadow>
+          </Grid>
+        </Grid>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };
 
