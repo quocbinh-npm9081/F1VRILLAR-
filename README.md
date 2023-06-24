@@ -6,6 +6,10 @@
 
 - [@Cao Quốc Bình](https://www.facebook.com/profile.php?id=100079622545419)
 
+## Tech Stack
+
+**Client:** React, Material UI, Style-component, ChartJS, React Router Dom V6, Postman API F1
+
 ## Run Locally
 
 Clone the project
