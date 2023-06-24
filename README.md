@@ -6,7 +6,7 @@
 ## Pages :
   ### Home: Trang chủ( bao gồm chức năng chuyển động slide, responesive)
   ### Drivers : Trang các tay đua( Bao gồm chức năng filter tìm kiếm tay đua, reset filter, Dialog xem thông tin chi tiết, xem thống kê điểm số của tay đua thông qua Bar Chart, Responsive)
-  ### Results : Trang lấy kế quả các vòng đua theo các năm ( Chức năng Filter theo các tiêu chí Năm tổ chức và vòng đua, Hiển thị thành tích lên Table, tóm tắt tổng quan trạng thái của tay đua qua các vòng đua tại Pie Chart, cho phép filter trên Pie Chart, responesive,
+  ### Results : Trang lấy kế quả các vòng đua theo các năm ( Chức năng Filter theo các tiêu chí Năm tổ chức và vòng đua, Hiển thị thành tích lên Table, phân trang phía Client, tóm tắt tổng quan trạng thái của tay đua qua các vòng đua xem tại Pie Chart, cho phép filter trên Pie Chart, responesive,
 
 
 ## Components:
@@ -24,6 +24,10 @@
   ! Bạn có thể tìm thấy Bar chart ở Folder Chart -> BarChart.tsx
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/9362343d-64ad-45d9-b4e3-c944483add61)
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/5479f41a-9023-43a1-926b-2f6f6bffa6e6)
+
+  ### StickHeaderTable ( Component hiển thị danh sách kết quả các của tay đua theo năm và theo vòng khi người người select vào tùy chọn, có chưc năng phân trang phía Client)
+  ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/66ea30e8-1487-436c-9ad0-5e21e19dd492)
+
 
 
 
