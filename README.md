@@ -1,6 +1,13 @@
 # F1 VRILLAR 
 ## BÀI TEST PHỎNG VẤN CHO VỊ TRÍ LẬP TRÌNH VIÊN FRONTEND/INTERVIEW ASSIGNMENT FOR THE POSITION OF FRONTEND PROGRAMMER
 
+## API document:
+Lấy danh sách các tay đua F1:                                             http://ergast.com/api/f1/drivers 
+Lấy thông tin của 1 tay đua:                                              http://ergast.com/api/f1/drivers/{{driverid}}
+Lấy thông tin thành tích của các tay đua theo các năm và các vòng đua :   http://ergast.com/api/f1/{{year}}/{{round}}/results
+
+
+
 ## Struct folder
 
 ## Pages :
