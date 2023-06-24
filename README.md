@@ -7,7 +7,7 @@
 > Bật cmd chạy câu lệnh
 
 ```
-git clone https://github.com/quocbinh-npm9081/F1VRILLAR-.git
+git clone https://github.com/quocbinh-npm9081/F1VRILLAR-
 ```
 
 > Vào dự án và tài đặt 1 số thư viện cần thiết, và chạy dự án
