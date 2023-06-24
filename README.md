@@ -3,13 +3,21 @@
 
 > **Note**
 > Hướng dẫn cài đặt project về máy
+ 
 > Bật cmd chạy câu lệnh
 
 ```
 git clone https://github.com/quocbinh-npm9081/F1VRILLAR-.git
 ```
 
-> Ca
+> Vào dự án và tài đặt 1 số thư viện cần thiết, và chạy dự án
+
+```
+cd F1VRILLAR
+npm install
+npm start
+```
+
 
 
 ## API document:
