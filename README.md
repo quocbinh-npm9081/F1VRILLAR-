@@ -1,12 +1,15 @@
 # F1 VRILLAR 
 ## BÀI TEST PHỎNG VẤN CHO VỊ TRÍ LẬP TRÌNH VIÊN FRONTEND/INTERVIEW ASSIGNMENT FOR THE POSITION OF FRONTEND PROGRAMMER
 
-> **Hướng dẫn cài đặt project về máy**
+> **Note**
+> Hướng dẫn cài đặt project về máy
 > Bật cmd chạy câu lệnh
 
 ```
 git clone https://github.com/quocbinh-npm9081/F1VRILLAR-.git
 ```
+
+> Ca
 
 
 ## API document:
