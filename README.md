@@ -6,25 +6,17 @@
 
 - [@Cao Quốc Bình](https://www.facebook.com/profile.php?id=100079622545419)
 
-> **Note**
-> Hướng dẫn cài đặt project về máy
- 
-> Bật cmd chạy câu lệnh
 
-```
-git clone https://github.com/quocbinh-npm9081/F1VRILLAR-
-```
+## Installation
 
-> Vào dự án và tài đặt 1 số thư viện cần thiết, và chạy dự án
+Install my-project with npm
 
-```
-cd F1VRILLAR-
-npm install
-npm start
-```
-
-
-
+```bash
+  git clone https://github.com/quocbinh-npm9081/F1VRILLAR-
+  cd F1VRILLAR-
+  npm install
+  npm start
+``` 
 
 ## API Reference
 
