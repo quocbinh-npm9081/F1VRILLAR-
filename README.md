@@ -1,6 +1,11 @@
 # F1 VRILLAR 
 ## BÀI TEST PHỎNG VẤN CHO VỊ TRÍ LẬP TRÌNH VIÊN FRONTEND/INTERVIEW ASSIGNMENT FOR THE POSITION OF FRONTEND PROGRAMMER
 
+
+## Authors
+
+- [Cao Quốc Bình]([https://www.github.com/octokatherine](https://www.facebook.com/profile.php?id=100079622545419))
+
 > **Note**
 > Hướng dẫn cài đặt project về máy
  
