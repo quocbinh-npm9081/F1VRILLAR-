@@ -25,7 +25,10 @@
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/9362343d-64ad-45d9-b4e3-c944483add61)
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/5479f41a-9023-43a1-926b-2f6f6bffa6e6)
 
-  ### StickHeaderTable ( Component hiển thị danh sách kết quả các của tay đua theo năm và theo vòng khi người người select vào tùy chọn, có chưc năng phân trang phía Client)
+  ### PieChart: Component hiển thị trạng thái của các tay đua khi kết thức các vòng thi ( animation khi filter, responsive)
+  ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/eca58406-ec05-445b-8fe4-9e31c18c2848)
+
+  ### StickHeaderTable: Component hiển thị danh sách kết quả các của tay đua theo năm và theo vòng khi người người select vào tùy chọn, có chưc năng phân trang phía Client
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/66ea30e8-1487-436c-9ad0-5e21e19dd492)
 
 
