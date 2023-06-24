@@ -56,8 +56,8 @@
 
 > Domain : https://f1-vrillar-caoquocbinh.vercel.app/
 > Deployment: https://f1-vrillar-caoquocbinh-r2ezwayla-quocbinh-npm9081.vercel.app/
-
-** Domain và Deployment đang có lỗi không thể call API, anh chị xin vui lòng Clone Source về máy để Project được chỉnh chu hơn ạ, Em xin lỗi về sự bất tiện này :((( **
+> **Warning**
+> Domain và Deployment đang có lỗi không thể call API, anh chị xin vui lòng Clone Source về máy để Project được chỉnh chu hơn ạ, Em xin lỗi về sự bất tiện này :(((
 
 
 
