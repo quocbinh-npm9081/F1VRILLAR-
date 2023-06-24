@@ -20,12 +20,37 @@ npm start
 
 
 
-## API document:
-> Lấy danh sách các tay đua F1:                                             http://ergast.com/api/f1/drivers
 
-> Lấy thông tin của 1 tay đua:                                              http://ergast.com/api/f1/drivers/{{driverid}}
+## API Reference
 
-> Lấy thông tin thành tích của các tay đua theo các năm và các vòng đua :   http://ergast.com/api/f1/{{year}}/{{round}}/results
+#### Lấy danh sách các tay đua F1:
+
+```http
+  GET http://ergast.com/api/f1/drivers
+```
+
+
+
+#### Lấy thông tin của 1 tay đua:
+
+```http
+  GET http://ergast.com/api/f1/drivers/{{driverid}}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `driverid`      | `string` | **Required**. Id của tay đua, hoặc tên của anh ấy |
+
+#### Lấy thông tin thành tích của các tay đua theo các năm và các vòng đua :
+
+```http
+  GET http://ergast.com/api/f1/{{year}}/{{round}}/results
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `year`      | `string` | **Required**. Năm cuộc đua đó diễn ra |
+| `round`      | `string` | **Required**. Vòng đua |
 
 
 
