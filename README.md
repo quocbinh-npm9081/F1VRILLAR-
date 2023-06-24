@@ -18,8 +18,11 @@
   ### ButtonContained: Button có background màu xanh dương, dừng để rest các tùy chọn của người dùng trở về trạng tháy ban đầu ( mặc định chọn toàn bộ tay đua)
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/e2e10b9d-ebce-4dd9-83b2-65b3a36b95a7)
 
-  ### CardDriver: Thẻ thông tin của tay đua( bao gồm ảnh của tay đua và thông tin cơ bản của anh ấy)
+  ### CardDriver: Thẻ thông tin của tay đua( bao gồm ảnh của tay đua và thông tin cơ bản của anh ấy, click vào card để xem nhiều thôn tin hơn)
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/3bdb9d10-9555-4a69-ac74-0f5b692d06d2)
+  ### Dialog: Dialog mở ra khi bạn click vào CardDriver cho phép bạn xem nhiều thông tin hơn ( xem thống kê điểm số của tay đua)
+  ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/9362343d-64ad-45d9-b4e3-c944483add61)
+
 
 
 
