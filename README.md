@@ -4,7 +4,7 @@
 
 ## Authors
 
-- [@Cao Quốc Bình]([https://www.github.com/octokatherine](https://www.facebook.com/profile.php?id=100079622545419))
+- [@Cao Quốc Bình](https://www.facebook.com/profile.php?id=100079622545419)
 
 > **Note**
 > Hướng dẫn cài đặt project về máy
