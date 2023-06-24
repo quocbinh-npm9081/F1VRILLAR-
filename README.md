@@ -6,17 +6,32 @@
 
 - [@Cao Quốc Bình](https://www.facebook.com/profile.php?id=100079622545419)
 
+## Run Locally
 
-## Installation
-
-Install F1 VRILLAR  with npm
+Clone the project
 
 ```bash
-  git clone https://github.com/quocbinh-npm9081/F1VRILLAR-
+   git clone https://github.com/quocbinh-npm9081/F1VRILLAR-
+```
+
+Go to the project directory
+
+```bash
   cd F1VRILLAR-
+```
+
+Install dependencies
+
+```bash
   npm install
-  npm start
-``` 
+```
+
+Start the server
+
+```bash
+   npm start
+```
+
 
 ## API Reference
 
