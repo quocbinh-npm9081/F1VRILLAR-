@@ -33,15 +33,15 @@ npm start
 ## Pages :
 
  - Home: Trang chủ( bao gồm chức năng chuyển động slide, responesive)
- - 
+  
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/97a9dd06-b584-43cc-88fa-0135a11334fc)
 
   - Drivers : Trang các tay đua( Bao gồm chức năng filter tìm kiếm tay đua, reset filter, Dialog xem thông tin chi tiết, xem thống kê điểm số của tay đua thông qua Bar Chart, Responsive)
-  - 
+   
   ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/4b1688c7-eecf-4115-a11a-927056edcc87)
 
   - Results : Trang lấy kế quả các vòng đua theo các năm ( Chức năng Filter theo các tiêu chí Năm tổ chức và vòng đua, Hiển thị thành tích lên Table, phân trang phía Client, tóm tắt tổng quan trạng thái của tay đua qua các vòng đua xem tại Pie Chart, cho phép filter trên Pie Chart, responesive,
-  - 
+   
 ![image](https://github.com/quocbinh-npm9081/F1VRILLAR-/assets/68917523/7b889803-7401-4cb4-a002-c2c496e4a1a3)
 
 
