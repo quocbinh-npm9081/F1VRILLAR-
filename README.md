@@ -8,7 +8,7 @@
 
 ## Tech Stack
 
-**Client:** React, Material UI, Style-component, ChartJS, React Router Dom V6, Postman API F1
+**Client:** React Hook, Typecript, Material UI, Style-component, ChartJS, React Router Dom V6, Postman API F1
 
 ## Run Locally
 
